@@ -105,6 +105,7 @@ export PACKAGES="\
 	networkmanager \
 	nfs-utils \
 	noto-fonts-emoji \
+	noto-fonts-cjk \
 	nss-mdns \
 	openal \
 	openssh \
@@ -248,6 +249,9 @@ postinstallhook() {
 	${USERNAME} ALL=(ALL) NOPASSWD: /usr/bin/chimera-session-use-lightdm
 	${USERNAME} ALL=(ALL) NOPASSWD: /usr/share/chimera/bin/power-tool
 	" > /etc/sudoers.d/chimera
+
+	sed -i 's/set mouse=a/set mouse-=a/g' /usr/share/vim/vim90/defaults.vim
+	ln -s -f /usr/bin/vim /usr/bin/vi
 
 	# disable retroarch menu in joypad configs
 	find /usr/share/libretro/autoconfig -type f -name '*.cfg' | xargs -d '\n' sed -i '/input_menu_toggle_btn/d'
