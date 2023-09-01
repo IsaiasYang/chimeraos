@@ -50,6 +50,7 @@ export PACKAGES="\
 	gnome-software \
 	gnome-text-editor \
 	gst-plugin-pipewire \
+	gparted \
 	haveged \
 	htop \
 	intel-gpu-tools \
@@ -134,6 +135,7 @@ export PACKAGES="\
 	wget \
 	which \
 	wireplumber \
+	wine \
 	wqy-zenhei \
 	xdg-desktop-portal \
 	xdg-desktop-portal-gnome \
@@ -141,6 +143,7 @@ export PACKAGES="\
 	xdg-user-dirs-gtk \
 	xf86-video-amdgpu \
 	xorg-server \
+	zsh \
 "
 
 export PACKAGE_OVERRIDES="\
@@ -164,6 +167,7 @@ export PACKAGE_OVERRIDES="\
 # Which is often the same as the package name but it can be different.
 # Check on the AUR webpage if you are unsure
 export AUR_PACKAGES="\
+	anydesk-bin \
 	ayaled \
 	ayn-platform-dkms-git \
 	bcm20702a1-firmware \
@@ -187,6 +191,7 @@ export AUR_PACKAGES="\
 	nintendo-udev \
 	opengamepadui-bin \
 	opengamepadui-session-git \
+	onedrive-abraunegg \
 	pikaur \
 	python-vdf \
 	retroarch-autoconfig-udev-git \
@@ -201,6 +206,7 @@ export AUR_PACKAGES="\
 	steam-removable-media-git \
 	wyvern \
 	xpad-noone-dkms \
+	yay-bin \
 	zenergy-dkms-git \
 "
 
