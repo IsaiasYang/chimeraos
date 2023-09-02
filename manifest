@@ -294,6 +294,7 @@ postinstallhook() {
 	grep -v org.gnome.Software.desktop | \
 	grep -v org.gnome.TextEditor.desktop | \
 	grep -v steam.desktop | \
+	grep -v gparted.desktop | \
 	xargs -I {} sh -c "echo NoDisplay=true >> {}"
 
 	# force -steamdeck option in desktop mode to prevent constant steam updates
