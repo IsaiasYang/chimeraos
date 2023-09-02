@@ -53,6 +53,11 @@ export PACKAGES="\
 	gparted \
 	haveged \
 	htop \
+	ibus-pinyin \
+	ibus-table \
+	ibus-table-chinese \
+	ibus-anthy \
+	ibus-hangul \
 	intel-gpu-tools \
 	intel-media-driver \
 	intel-ucode \
