@@ -31,6 +31,7 @@ export PACKAGES="\
 	epiphany \
 	ethtool \
 	evtest \
+	efibootmgr \
 	ffmpeg \
 	file-roller \
 	firejail \
@@ -174,7 +175,6 @@ export PACKAGE_OVERRIDES="\
 # Check on the AUR webpage if you are unsure
 export AUR_PACKAGES="\
 	anydesk-bin \
-	ayaled \
 	ayn-platform-dkms-git \
 	bcm20702a1-firmware \
 	boxtron \
@@ -226,12 +226,10 @@ export SERVICES="\
 	fstrim.timer \
 	handycon \
 	haveged \
-	home-swapfile.swap \
 	lightdm \
 	ryzenadj-controller \
 	sshd \
 	systemd-timesyncd \
-	swapfile \
 "
 
 export USER_SERVICES="\
