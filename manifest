@@ -200,6 +200,8 @@ export AUR_PACKAGES="\
 	onedrive-abraunegg \
 	pikaur \
 	python-vdf \
+	protonup-qt-bin \
+	protontricks \
 	retroarch-autoconfig-udev-git \
 	rtl8812au-dkms-git \
 	rtl8814au-dkms-git \
@@ -300,6 +302,8 @@ postinstallhook() {
 	grep -v org.gnome.TextEditor.desktop | \
 	grep -v steam.desktop | \
 	grep -v gparted.desktop | \
+	grep -v protonup-qt.desktop | \
+	grep -v protontricks.desktop | \
 	xargs -I {} sh -c "echo NoDisplay=true >> {}"
 
 	# force -steamdeck option in desktop mode to prevent constant steam updates
