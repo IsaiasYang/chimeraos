@@ -51,6 +51,10 @@ export PACKAGES="\
 	gnome-shell \
 	gnome-software \
 	gnome-text-editor \
+	gnome-icon-theme-extras \
+	gnome-tweaks \
+	gnome-shell-extensions \
+	gnome-tweak-tool \
 	gst-plugin-pipewire \
 	gparted \
 	haveged \
@@ -155,8 +159,8 @@ export PACKAGES="\
 "
 
 export PACKAGE_OVERRIDES="\
-	https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.5-chos1-1/linux-chimeraos-6.5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.5-chos1-1/linux-chimeraos-headers-6.5.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.5.1-chos2-1/linux-chimeraos-6.5.1.chos2-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.5.1-chos2-1/linux-chimeraos-headers-6.5.1.chos2-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.1.6-chos1-2/lib32-libva-mesa-driver-23.1.6.chos1-2-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.1.6-chos1-2/lib32-mesa-23.1.6.chos1-2-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.1.6-chos1-2/lib32-mesa-vdpau-23.1.6.chos1-2-x86_64.pkg.tar.zst \
@@ -213,6 +217,7 @@ export AUR_PACKAGES="\
 	ryzenadj-controller-git \
 	rz608-fix-git \
 	steam-removable-media-git \
+	sk-chos-tool \
 	wyvern \
 	xpad-noone-dkms \
 	yay-bin \
@@ -261,6 +266,7 @@ postinstallhook() {
 	${USERNAME} ALL=(ALL) NOPASSWD: /usr/bin/chimera-session-use-lightdm
 	${USERNAME} ALL=(ALL) NOPASSWD: /usr/share/chimera/bin/power-tool
 	" > /etc/sudoers.d/chimera
+	echo "${USERNAME} ALL=(ALL) NOPASSWD:ALL" > "/etc/sudoers.d/${USERNAME}"
 
 	sed -i 's/set mouse=a/set mouse-=a/g' /usr/share/vim/vim90/defaults.vim
 	ln -s -f /usr/bin/vim /usr/bin/vi
@@ -299,10 +305,13 @@ postinstallhook() {
 	grep -v org.gnome.Settings.desktop | \
 	grep -v org.gnome.Software.desktop | \
 	grep -v org.gnome.TextEditor.desktop | \
+	grep -v org.gnome.tweaks.desktop | \
 	grep -v steam.desktop | \
 	grep -v gparted.desktop | \
 	grep -v protonup-qt.desktop | \
 	grep -v protontricks.desktop | \
+	grep -v sk-chos-tool.desktop | \
+	grep -v sk-chos-tool-command.desktop | \
 	xargs -I {} sh -c "echo NoDisplay=true >> {}"
 
 	# force -steamdeck option in desktop mode to prevent constant steam updates
