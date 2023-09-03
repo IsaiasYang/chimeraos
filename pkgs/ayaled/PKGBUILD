@@ -3,11 +3,11 @@ pkgname=ayaled
 pkgver=0.5.2
 pkgrel=1
 pkgdesc="A daemon to manage joystick LEDs on AYANEO devices"
-url="https://github.com/honjow/AyaLed-rs"
+url="https://github.com/mengmeet/ayaled"
 arch=('x86_64')
 license=('custom')
 makedepends=('cargo')
-source=(${pkgname}-${pkgver}.tar.gz::https://github.com/honjow/AyaLed-rs/archive/refs/tags/${pkgver}.tar.gz)
+source=(${pkgname}-${pkgver}.tar.gz::https://github.com/mengmeet/ayaled/archive/refs/tags/${pkgver}.tar.gz)
 sha256sums=('SKIP')
 
 prepare() {
