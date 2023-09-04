@@ -68,6 +68,7 @@ export PACKAGES="\
 	intel-media-driver \
 	intel-ucode \
 	intel-undervolt \
+	jq \
 	lib32-curl \
 	lib32-fontconfig \
 	lib32-freetype2 \
