@@ -24,6 +24,7 @@ export PACKAGES="\
 	broadcom-wl-dkms \
 	cifs-utils \
 	diffutils \
+	dconf-editor \
 	dkms \
 	dmidecode \
 	dosbox \
@@ -130,6 +131,7 @@ export PACKAGES="\
 	pulsemixer \
 	python \
 	python-inotify-simple \
+	papirus-icon-theme \
 	retroarch \
 	rsync \
 	smbclient \
@@ -296,6 +298,8 @@ postinstallhook() {
 	# clean up desktop shortcuts
 	sed -i -e 's/Name=Steam (Runtime)/Name=Steam/' /usr/share/applications/steam.desktop
 	find /usr/share/applications/* | \
+	grep -v ca.desrt.dconf-editor.desktop | \
+	grep -v gparted.desktop | \
 	grep -v org.chimeraos.Gamescope.desktop | \
 	grep -v org.chimeraos.app.desktop | \
 	grep -v org.gnome.Console.desktop | \
@@ -306,10 +310,10 @@ postinstallhook() {
 	grep -v org.gnome.Software.desktop | \
 	grep -v org.gnome.TextEditor.desktop | \
 	grep -v org.gnome.tweaks.desktop | \
-	grep -v steam.desktop | \
-	grep -v gparted.desktop | \
+	grep -v org.gnome.Extensions.desktop | \
 	grep -v protonup-qt.desktop | \
 	grep -v protontricks.desktop | \
+	grep -v steam.desktop | \
 	grep -v sk-chos-tool.desktop | \
 	grep -v sk-chos-tool-command.desktop | \
 	xargs -I {} sh -c "echo NoDisplay=true >> {}"
