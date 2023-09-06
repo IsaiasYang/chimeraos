@@ -225,6 +225,7 @@ export AUR_PACKAGES="\
 	rz608-fix-git \
 	steam-removable-media-git \
 	sk-chos-tool \
+	sk-boot-to-windows \
 	wyvern \
 	xpad-noone-dkms \
 	yay-bin \
