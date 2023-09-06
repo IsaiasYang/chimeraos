@@ -142,6 +142,7 @@ export PACKAGES="\
 	sshfs \
 	steam \
 	sudo \
+	s-tui \
 	ttf-liberation \
 	unzip \
 	usb_modeswitch \
@@ -302,6 +303,7 @@ postinstallhook() {
 	# clean up desktop shortcuts
 	sed -i -e 's/Name=Steam (Runtime)/Name=Steam/' /usr/share/applications/steam.desktop
 	find /usr/share/applications/* | \
+	grep -v anydesk.desktop | \
 	grep -v ca.desrt.dconf-editor.desktop | \
 	grep -v gparted.desktop | \
 	grep -v org.chimeraos.Gamescope.desktop | \
