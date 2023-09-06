@@ -244,6 +244,7 @@ export SERVICES="\
 	ryzenadj-controller \
 	sshd \
 	systemd-timesyncd \
+	sk-auto-keep-boot-entry \
 "
 
 export USER_SERVICES="\
