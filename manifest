@@ -245,6 +245,7 @@ export SERVICES="\
 	sshd \
 	systemd-timesyncd \
 	sk-auto-keep-boot-entry \
+	sk-update-boot-entry \
 "
 
 export USER_SERVICES="\
