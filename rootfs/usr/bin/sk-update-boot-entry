@@ -50,6 +50,8 @@ if [[ -n "${SWAP_PARTUUID}" ]]; then
 
 elif [[ -n "${RESUME_OFFSET}" ]]; then
     echo "RESUME_OFFSET 非空，添加到内核参数"
+    systemctl enable --now swapfile.service
+    systemctl enable --now frzr_root-swap-swapfile.swap
     RESUME_CMD="resume=PARTUUID=${root_partuuid} resume_offset=${RESUME_OFFSET}"
     
 elif [[ "${SWAP_FILE}" == "1" ]]; then
