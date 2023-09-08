@@ -26,7 +26,7 @@ home_size=$(lsblk -b -n -o SIZE $home_device | awk '{print int($1/1024/1024)}')
 echo "当前home大小 ${home_size}MiB"
 
 # 检查 home 分区大小和未分配空间
-if [[ $home_size -lt 20480 && $unallocated_space -gt 0 ]]; then
+if [[ $home_size -lt 51200 && $unallocated_space -gt 0 ]]; then
     # 计算要扩展的大小（以 MiB 为单位）    
     extend_size=$(( $home_size + $unallocated_space ))
 
