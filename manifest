@@ -236,15 +236,19 @@ export SERVICES="\
 	avahi-daemon \
 	bluetooth \
 	bluetooth-workaround \
+	auto-expand-home \
 	fstrim.timer \
+	frzr_root-swap-swapfile.swap \
 	handycon \
 	haveged \
 	lightdm \
 	ryzenadj-controller \
 	sshd \
 	systemd-timesyncd \
+	swapfile \
 	sk-auto-keep-boot-entry \
 	sk-update-boot-entry \
+	sk-resume \
 "
 
 export USER_SERVICES="\
