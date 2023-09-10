@@ -284,6 +284,8 @@ postinstallhook() {
 	sed -i 's/set mouse=a/set mouse-=a/g' /usr/share/vim/vim90/defaults.vim
 	ln -s -f /usr/bin/vim /usr/bin/vi
 
+	sed -i "s/PasswordAuthentication no/PasswordAuthentication yes/" /etc/ssh/sshd_config
+
 	# disable retroarch menu in joypad configs
 	find /usr/share/libretro/autoconfig -type f -name '*.cfg' | xargs -d '\n' sed -i '/input_menu_toggle_btn/d'
 
