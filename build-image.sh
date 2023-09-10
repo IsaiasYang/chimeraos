@@ -120,6 +120,10 @@ systemctl --global enable ${USER_SERVICES}
 # disable root login
 passwd --lock root
 
+#
+groupadd -r wheel 2>/dev/null
+groupadd -r users 2>/dev/null
+
 # create user
 groupadd -r autologin
 useradd -m ${USERNAME} -G autologin,wheel
