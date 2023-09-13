@@ -5,7 +5,7 @@ Before=update_boot_config.service
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/sk-update-boot-entry
+ExecStart=/usr/bin/sk-update-boot-entry 1
 
 [Install]
 WantedBy=multi-user.target
