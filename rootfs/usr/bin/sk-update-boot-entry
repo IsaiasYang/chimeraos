@@ -6,6 +6,8 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
+NEED_REBOOT=${1:-"0"}
+
 echo "start frzr-unlock"
 frzr-unlock
 
@@ -27,6 +29,7 @@ echo "SWAP_PARTUUID=$SWAP_PARTUUID"
 
 # swap file
 root_partuuid=$(lsblk -no PARTUUID $(mount | grep ' / ' | cut -d' ' -f1))
+
 if [ -f "/frzr_root/swap/swapfile" ]; then
     RESUME_OFFSET=$(btrfs inspect-internal map-swapfile -r /frzr_root/swap/swapfile)
 fi
@@ -49,13 +52,21 @@ if [[ -n "${SWAP_PARTUUID}" ]]; then
     rm -f /frzr_root/swap/swapfile 2>/dev/null
 
 elif [[ -n "${RESUME_OFFSET}" ]]; then
-    echo "RESUME_OFFSET 非空，添加到内核参数"
-    systemctl enable --now swapfile.service
-    systemctl enable --now frzr_root-swap-swapfile.swap
+    echo "RESUME_OFFSET 非空, 启动swap服务, 添加到内核参数"
+
+    systemctl enable --now swapfile.service && systemctl enable --now frzr_root-swap-swapfile.swap
+    # 获取上一个命令的退出状态码
+    exit_status=$?
+    if [ $exit_status -ne 0 ]; then
+        echo "启动swap服务失败, 重新创建swap文件"
+        /usr/bin/sk-mkswapfile
+        RESUME_OFFSET=$(btrfs inspect-internal map-swapfile -r /frzr_root/swap/swapfile)
+    fi
+
     RESUME_CMD="resume=PARTUUID=${root_partuuid} resume_offset=${RESUME_OFFSET}"
     
 elif [[ "${SWAP_FILE}" == "1" ]]; then
-    echo "SWAP_PARTUUID 和 RESUME_OFFSET 都为空，创建 swapfile"
+    echo "新创建 swapfile"
     /usr/bin/sk-mkswapfile
 
     RESUME_OFFSET=$(btrfs inspect-internal map-swapfile -r /frzr_root/swap/swapfile)
@@ -75,25 +86,36 @@ if [ -f "/boot/loader/entries/frzr.conf" ]; then
     # 检查文件中是否已存在 resume=，如果不存在，则添加
     if ! grep -q "resume=" "/boot/loader/entries/frzr.conf"; then
 
+        echo "Add RESUME_CMD to frzr.conf"
         sed -i "s/ splash / splash ${RESUME_CMD} /" "/boot/loader/entries/frzr.conf"
-        echo "Added RESUME_CMD to frzr.conf"
+
+        if [[ "x${NEED_REBOOT}" == "x1" ]]; then
+            echo "reboot"
+            sk-set-next-boot-entry && reboot
+        fi
+
     else
         # 获取已存在的 resume= 行的内容
-        existing_resume=$(grep -o "resume=[^[:space:]]*" "/boot/loader/entries/frzr.conf")
-        echo "existing resume: ${existing_resume}"
+        existing_resume=$(grep -o "resume=[^[:space:]]*\(\s*resume_offset=[^[:space:]]*\)\?" "/boot/loader/entries/frzr.conf")
+        echo "已存在的 resume: ${existing_resume}"
         
         # 如果现有的 resume= 行与 RESUME_CMD 不匹配，则进行替换
         if [ "${existing_resume}" != "${RESUME_CMD}" ]; then
         
             # 检查文件中是否已存在 resume_offset=，如果存在，则删除
-            existing_resume_offset=$(grep -o "resume_offset=[^[:space:]]*" "/boot/loader/entries/frzr.conf")
-            sed -i "s/${existing_resume_offset} //" "/boot/loader/entries/frzr.conf"
+            # existing_resume_offset=$(grep -o "resume_offset=[^[:space:]]*" "/boot/loader/entries/frzr.conf")
+            # sed -i "s/${existing_resume_offset} //" "/boot/loader/entries/frzr.conf"
 
+            echo "替换 frzr.conf 中原有的 RESUME_CMD"
             sed -i "s/${existing_resume}/${RESUME_CMD}/" "/boot/loader/entries/frzr.conf"
-            echo "Replaced existing RESUME_CMD in frzr.conf"
+
+            if [[ "x${NEED_REBOOT}" == "x1" ]]; then
+                echo "reboot"
+                sk-set-next-boot-entry && reboot
+            fi     
             
         else
-            echo "RESUME_CMD already present and matches in frzr.conf"
+            echo "RESUME_CMD已存在并在frzr.conf中, 并且匹配. 无需更新"
         fi
     fi
 

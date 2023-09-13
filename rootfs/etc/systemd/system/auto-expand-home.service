@@ -1,6 +1,6 @@
 [Unit]
 Description=Home Partition Resize
-After=network.target
+Before=frzr_swap-swap-swapfile.swap sk-update-boot-entry.service
 
 [Service]
 #Type=oneshot
