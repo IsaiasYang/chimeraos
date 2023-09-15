@@ -99,6 +99,12 @@ else
 	pacman --noconfirm -S "${KERNEL_PACKAGE}" "${KERNEL_PACKAGE}-headers"
 fi
 
+# pipewire-jack and jack2 are in conflict (jack)
+if pacman -Qs jack2 > /dev/null; then
+	echo "jack2 is installed, removing it"
+    pacman -Rdd jack2
+fi
+
 # install own override packages
 pacman --noconfirm -U --overwrite '*' /own_pkgs/*
 rm -rf /var/cache/pacman/pkg
