@@ -284,6 +284,8 @@ postinstallhook() {
 
 	sed -i "s/PasswordAuthentication no/PasswordAuthentication yes/" /etc/ssh/sshd_config
 
+	sed -i "s/# export STEAM_GAMESCOPE_COLOR_MANAGED=1/export STEAM_GAMESCOPE_COLOR_MANAGED=1/" /usr/share/gamescope-session/gamescope-session-script
+
 	# disable retroarch menu in joypad configs
 	find /usr/share/libretro/autoconfig -type f -name '*.cfg' | xargs -d '\n' sed -i '/input_menu_toggle_btn/d'
 
