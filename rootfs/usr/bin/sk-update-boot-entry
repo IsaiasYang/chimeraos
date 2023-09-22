@@ -21,7 +21,7 @@ if [[ "$service_status" == "enabled" ]]; then
 fi
 
 # swap uuid
-swap_dev=$(awk '$2 == "partition" && $1 ~ "^/dev/" {print $1}' /proc/swaps)
+swap_dev=$(awk '$2 == "partition" && $1 ~ "^/dev/[^z]" {print $1}' /proc/swaps)
 if [[ -n "$swap_dev" ]]; then
   SWAP_PARTUUID=$(lsblk -no PARTUUID -f "$swap_dev")
 fi
