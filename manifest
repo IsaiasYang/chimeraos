@@ -219,7 +219,6 @@ export AUR_PACKAGES="\
 	rtl8821au-dkms-git \
 	rtw89-dkms-git \
 	ryzenadj-git \
-	ryzenadj-controller-git \
 	rz608-fix-git \
 	steam-removable-media-git \
 	sk-chos-tool \
@@ -242,7 +241,6 @@ export SERVICES="\
 	handycon \
 	haveged \
 	lightdm \
-	ryzenadj-controller \
 	sshd \
 	systemd-timesyncd \
 	swapfile \
