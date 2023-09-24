@@ -282,6 +282,9 @@ postinstallhook() {
 	sed -i 's/set mouse=a/set mouse-=a/g' /usr/share/vim/vim90/defaults.vim
 	ln -s -f /usr/bin/vim /usr/bin/vi
 
+	sed -i "s#/home/${USERNAME}:/bin/bash#/home/${USERNAME}:/bin/zsh#" /etc/passwd
+	sed -i "s#/root:/bin/bash#/root:/bin/zsh#" /etc/passwd
+	
 	sed -i "s/PasswordAuthentication no/PasswordAuthentication yes/" /etc/ssh/sshd_config
 
 	sed -i "s/# export STEAM_GAMESCOPE_COLOR_MANAGED=1/export STEAM_GAMESCOPE_COLOR_MANAGED=1/" /usr/share/gamescope-session/gamescope-session-script
