@@ -12,8 +12,7 @@ depends=('python' 'python-evdev')
 optdepends=()
 makedepends=('git' 'python' 'python-evdev' 'python-installer' 'python-build'
 	     'python-wheel' 'python-setuptools')
-_tag=fcd9606b8921ca86a0250ac6171d9423de478677
-source=("${_gitdir}::git+https://github.com/ShadowBlip/${_gitdir}.git#tag=${_tag}")
+source=("${_gitdir}::git+https://github.com/honjow/${_gitdir}.git")
 sha256sums=('SKIP')
 pkgver() {
 	cd "$srcdir/${_gitdir}"
