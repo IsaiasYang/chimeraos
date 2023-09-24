@@ -12,7 +12,7 @@ echo "start frzr-unlock"
 frzr-unlock
 
 echo $(ls /boot/)
-echo $(ls /frzr_root/deployments)
+# echo $(ls /frzr_root/deployments)
 
 service_status=$(systemctl is-enabled update_boot_config.service 2>/dev/null)
 if [[ "$service_status" == "enabled" ]]; then
@@ -55,9 +55,12 @@ elif [[ -n "${RESUME_OFFSET}" ]]; then
     echo "RESUME_OFFSET 非空, 启动swap服务, 添加到内核参数"
 
     systemctl enable --now swapfile.service && systemctl enable --now frzr_root-swap-swapfile.swap
-    # 获取上一个命令的退出状态码
-    exit_status=$?
-    if [ $exit_status -ne 0 ]; then
+
+    is_enabled=$(systemctl is-enabled frzr_root-swap-swapfile.swap)
+    is_active=$(systemctl is-active frzr_root-swap-swapfile.swap)
+    if [[ "${is_enabled}" == "enabled" && "${is_active}" == "active" ]]; then
+        echo "frzr_root-swap-swapfile.swap is enabled"
+    else
         echo "启动swap服务失败, 重新创建swap文件"
         /usr/bin/sk-mkswapfile
         RESUME_OFFSET=$(btrfs inspect-internal map-swapfile -r /frzr_root/swap/swapfile)
