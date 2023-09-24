@@ -3,7 +3,7 @@ LABEL contributor="shadowapex@gmail.com"
 COPY rootfs/etc/pacman.conf /etc/pacman.conf
 RUN echo -e "keyserver-options auto-key-retrieve" >> /etc/pacman.d/gnupg/gpg.conf && \
     pacman-key --init && \
-    pacman --noconfirm -Syyuu && \
+    pacman --noconfirm -Syy && \
     pacman --noconfirm -S \
     arch-install-scripts \
     btrfs-progs \

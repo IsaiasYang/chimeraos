@@ -160,6 +160,7 @@ export PACKAGES="\
 	xf86-video-amdgpu \
 	xorg-server \
 	xfsprogs \
+	zram-generator \
 	zsh \
 "
 
