@@ -9,7 +9,7 @@ url="https://github.com/tchx84/Flatseal/"
 arch=('x86_64')
 license=('GPL3')
 depends=('flatpak' 'gjs' 'webkitgtk-6.0' 'libhandy' 'appstream-glib' 'libadwaita')
-makedepends=('git' 'flatpak-builder' 'ninja' 'base-devel')
+makedepends=('git' 'meson' 'flatpak-builder' 'ninja' 'base-devel')
 source=("git+https://github.com/tchx84/Flatseal.git")
 sha1sums=('SKIP')
 
