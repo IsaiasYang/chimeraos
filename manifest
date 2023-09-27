@@ -334,6 +334,7 @@ postinstallhook() {
 	grep -v steam.desktop | \
 	grep -v sk-chos-tool.desktop | \
 	grep -v sk-chos-tool-command.desktop | \
+	grep -v com.github.tchx84.Flatseal.desktop | \
 	xargs -I {} sh -c "echo NoDisplay=true >> {}"
 
 	# force -steamdeck option in desktop mode to prevent constant steam updates
