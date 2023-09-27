@@ -191,7 +191,6 @@ export AUR_PACKAGES="\
 	boxtron \
 	chimera \
 	downgrade \
-	flatseal-git \
 	gamescope-plus \
 	gamescope-session-git \
 	hhfc-git \
