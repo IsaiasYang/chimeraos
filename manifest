@@ -229,6 +229,11 @@ export AUR_PACKAGES="\
 	zenergy-dkms-git \
 "
 
+export PACKAGES_TO_DELETE="\
+	jack2 \
+	pulseaudio \
+"
+
 export SERVICES="\
 	NetworkManager \
 	avahi-daemon \

@@ -106,12 +106,13 @@ fi
 pacman --noconfirm -U --overwrite '*' /own_pkgs/*
 rm -rf /var/cache/pacman/pkg
 
-# pipewire-jack and jack2 are in conflict (jack)
-if pacman -Qs jack2 > /dev/null; then
-	echo "jack2 is installed, removing it"
-    pacman --noconfirm -Rdd jack2
-fi
-
+# loop delete packages
+for package in ${PACKAGES_TO_DELETE}; do
+	if pacman -Qs "${package}" > /dev/null; then
+		echo "${package} is installed, deleting"
+    	pacman --noconfirm -Rdd ${package}
+	fi
+done
 
 # install packages
 pacman --noconfirm -S --overwrite '*' ${PACKAGES}
