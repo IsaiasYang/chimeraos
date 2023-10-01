@@ -222,6 +222,8 @@ export AUR_PACKAGES="\
 	rtw89-dkms-git \
 	ryzenadj-git \
 	rz608-fix-git \
+	r8168-dkms \
+	r8152-dkms \
 	steam-removable-media-git \
 	sk-chos-tool \
 	sk-boot-to-windows \
