@@ -106,13 +106,10 @@ fi
 pacman --noconfirm -U --overwrite '*' /own_pkgs/*
 rm -rf /var/cache/pacman/pkg
 
-# loop delete packages
-for package in ${PACKAGES_TO_DELETE}; do
-	if [[ -n "$package" && "$(pacman -Qq $package)" == "$package" ]]; then
-		echo "${package} is installed, deleting"
-		pacman --noconfirm -Rdd $package
-	fi
-done
+# delete packages
+set +e
+pacman --noconfirm -Rdd ${PACKAGES_TO_DELETE} 2>/dev/null
+set -e
 
 # install packages
 pacman --noconfirm -S --overwrite '*' ${PACKAGES}
