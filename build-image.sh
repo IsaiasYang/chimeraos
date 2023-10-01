@@ -108,9 +108,9 @@ rm -rf /var/cache/pacman/pkg
 
 # loop delete packages
 for package in ${PACKAGES_TO_DELETE}; do
-	if pacman -Qs "${package}" > /dev/null; then
+	if pacman -Qs $package > /dev/null; then
 		echo "${package} is installed, deleting"
-    	pacman --noconfirm -Rdd ${package}
+		pacman --noconfirm -Rdd $package
 	fi
 done
 
