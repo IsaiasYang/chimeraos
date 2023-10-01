@@ -230,6 +230,7 @@ export AUR_PACKAGES="\
 	v2raya-bin \
 	wyvern \
 	yay-bin \
+	xpad-noone-dkms \
 	zenergy-dkms-git \
 "
 
