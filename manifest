@@ -191,6 +191,7 @@ export AUR_PACKAGES="\
 	boxtron \
 	chimera \
 	downgrade \
+	frzr-sk \
 	gamescope-plus \
 	gamescope-session-git \
 	gnome-shell-extension-clipboard-indicator \
