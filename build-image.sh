@@ -112,7 +112,7 @@ pacman --noconfirm -Rdd ${PACKAGES_TO_DELETE} 2>/dev/null
 set -e
 
 # install packages
-pacman --noconfirm -S --overwrite '*' ${PACKAGES}
+pacman --noconfirm -S --overwrite '*' --disable-download-timeout ${PACKAGES}
 rm -rf /var/cache/pacman/pkg
 
 # install AUR packages
