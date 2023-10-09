@@ -23,6 +23,7 @@ export PACKAGES="\
 	diffutils \
 	dconf-editor \
 	dkms \
+	distrobox \
 	dmidecode \
 	dosbox \
 	eog \
