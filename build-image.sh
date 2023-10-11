@@ -107,9 +107,13 @@ pacman --noconfirm -U --overwrite '*' /own_pkgs/*
 rm -rf /var/cache/pacman/pkg
 
 # delete packages
-set +e
-pacman --noconfirm -Rnsdd ${PACKAGES_TO_DELETE}
-set -e
+for package in ${PACKAGES_TO_DELETE}; do
+    echo "Checking if \$package is installed"
+	if pacman -Qq \$package 2> /dev/null; then
+		echo "\$package is installed, deleting"
+		pacman --noconfirm -Rnsdd \$package
+	fi
+done
 
 # install packages
 pacman --noconfirm -S --overwrite '*' --disable-download-timeout ${PACKAGES}
