@@ -62,7 +62,6 @@ export PACKAGES="\
 	haveged \
 	htop \
 	ibus-pinyin \
-	ibus-table \
 	ibus-table-chinese \
 	ibus-anthy \
 	ibus-hangul \
@@ -125,6 +124,7 @@ export PACKAGES="\
 	ntfs-3g \
 	openal \
 	openssh \
+	p7zip \
 	pipewire \
 	pipewire-alsa \
 	pipewire-jack \
@@ -142,6 +142,7 @@ export PACKAGES="\
 	steam \
 	sudo \
 	s-tui \
+	tree \
 	ttf-liberation \
 	unzip \
 	usb_modeswitch \
