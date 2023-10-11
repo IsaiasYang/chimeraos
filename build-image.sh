@@ -108,7 +108,7 @@ rm -rf /var/cache/pacman/pkg
 
 # delete packages
 set +e
-pacman --noconfirm -Rdd ${PACKAGES_TO_DELETE} 2>/dev/null
+pacman --noconfirm -Rnsdd ${PACKAGES_TO_DELETE}
 set -e
 
 # install packages
