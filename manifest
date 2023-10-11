@@ -55,7 +55,6 @@ export PACKAGES="\
 	gnome-icon-theme-extras \
 	gnome-tweaks \
 	gnome-shell-extensions \
-	gnome-tweak-tool \
 	gnome-menus \
 	gst-plugin-pipewire \
 	gparted \
