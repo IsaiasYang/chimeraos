@@ -15,7 +15,6 @@ export KERNEL_PACKAGE_ORIGIN="local"
 
 export PACKAGES="\
 	accountsservice \
-	adobe-source-han-sans-cn-fonts \
 	alsa-firmware \
 	alsa-utils \
 	amd-ucode \
@@ -154,6 +153,7 @@ export PACKAGES="\
 	which \
 	wireplumber \
 	wine \
+	wqy-microhei \
 	xdg-desktop-portal \
 	xdg-desktop-portal-gnome \
 	xdg-desktop-portal-wlr \
