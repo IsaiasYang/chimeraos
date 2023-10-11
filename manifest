@@ -205,7 +205,6 @@ export AUR_PACKAGES="\
 	libretro-prosystem-git \
 	libretro-stella2014-git \
 	libretro-virtualjaguar-git \
-	libextest-git \
 	kanit-font \
 	nintendo-udev \
 	opengamepadui-bin \
