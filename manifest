@@ -209,7 +209,6 @@ export AUR_PACKAGES="\
 	libretro-virtualjaguar-git \
 	kanit-font \
 	nintendo-udev \
-	opengamepadui-bin \
 	opengamepadui-session-git \
 	onedrive-abraunegg \
 	pikaur \
