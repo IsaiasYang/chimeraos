@@ -34,6 +34,7 @@ export PACKAGES="\
 	expect \
 	exfatprogs \
 	ffmpeg \
+	ffmpegthumbnailer \
 	file-roller \
 	firejail \
 	flatpak \
@@ -219,6 +220,7 @@ export AUR_PACKAGES="\
 	rtw89-dkms-git \
 	ryzenadj-git \
 	rz608-fix-git \
+	steam_notif_daemon \
 	steam-removable-media-git \
 	sk-chos-tool \
 	sk-boot-to-windows \
@@ -259,6 +261,7 @@ export USER_SERVICES="\
 	chimera.service \
 	clear-gamescope-modes \
 	gamemoded.service \
+	pipewire \
 	ryzen-tctl \
 	steam-patch.service \
 "
