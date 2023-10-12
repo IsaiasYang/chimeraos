@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     name: Build base docker image
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-4c
     steps:
       - uses: actions/checkout@v3
       - name: Login to GitHub Container Registry
