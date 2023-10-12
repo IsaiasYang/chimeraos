@@ -1,4 +1,4 @@
-name: System image build - stable
+name: System image build - dev stable
 
 env:
   REGISTRY: ghcr.io
