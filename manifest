@@ -228,6 +228,7 @@ export AUR_PACKAGES="\
 	steam-removable-media-git \
 	sk-chos-tool \
 	sk-boot-to-windows \
+	ttf-sarasa-gothic-sc \
 	v2raya-bin \
 	wyvern \
 	yay-bin \
