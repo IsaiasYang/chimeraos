@@ -197,6 +197,7 @@ export AUR_PACKAGES="\
 	gnome-shell-extension-clipboard-indicator-git \
 	gnome-shell-extension-desktop-icons-ng-git \
 	gnome-shell-extension-dash-to-dock \
+	gnome-shell-extension-transparent-top-bar-git \
 	hhfc-git \
 	legendary \
 	lib32-gamescope-plus \
