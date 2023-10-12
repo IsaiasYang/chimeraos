@@ -1,4 +1,4 @@
-name: System image build
+name: System image build - stable
 
 env:
   REGISTRY: ghcr.io
@@ -7,7 +7,7 @@ env:
 on:
   push:
     branches:
-      - dev
+      - 'dev-**'
   workflow_dispatch:
 
 jobs:
@@ -91,5 +91,3 @@ jobs:
      - pkgbuild
     name: Build ChimeraOS UNSTABLE image
     uses: ./.github/workflows/build-system-image.yml
-    with:
-      postfix: "[UNSTABLE]"
