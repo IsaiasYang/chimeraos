@@ -193,9 +193,6 @@ export AUR_PACKAGES="\
 	frzr-sk \
 	gamescope-plus \
 	gamescope-session-git \
-	gnome-shell-extension-clipboard-indicator-git \
-	gnome-shell-extension-desktop-icons-ng-git \
-	gnome-shell-extension-dash-to-dock \
 	hhfc-git \
 	legendary \
 	lib32-gamescope-plus \
