@@ -239,6 +239,7 @@ export PACKAGES_TO_DELETE="\
 	jack2 \
 	pulseaudio \
 	pulseaudio-alsa \
+	gamescope \
 "
 
 export SERVICES="\
