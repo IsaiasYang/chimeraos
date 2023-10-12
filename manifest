@@ -154,6 +154,7 @@ export PACKAGES="\
 	wget \
 	which \
 	wireplumber \
+	wine \
 	wqy-microhei \
 	xdg-desktop-portal \
 	xdg-desktop-portal-gnome \
@@ -215,6 +216,7 @@ export AUR_PACKAGES="\
 	pikaur \
 	python-vdf \
 	protonup-qt-bin \
+	protontricks \
 	r8152-dkms \
 	r8168-dkms \
 	retroarch-autoconfig-udev-git \
