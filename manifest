@@ -204,7 +204,6 @@ export AUR_PACKAGES="\
 	libretro-virtualjaguar-git \
 	kanit-font \
 	nintendo-udev \
-	opengamepadui-bin \
 	opengamepadui-session-git \
 	onedrive-abraunegg \
 	pikaur \
@@ -234,6 +233,7 @@ export PACKAGES_TO_DELETE="\
 	jack2 \
 	pulseaudio \
 	pulseaudio-alsa \
+	gamescope \
 "
 
 export SERVICES="\
