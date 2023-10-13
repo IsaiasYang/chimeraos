@@ -18,7 +18,9 @@ export PACKAGES="\
 	alsa-firmware \
 	alsa-utils \
 	amd-ucode \
+	bash-completion \
 	broadcom-wl-dkms \
+	bzip2 \
 	cifs-utils \
 	diffutils \
 	dconf-editor \
@@ -26,7 +28,6 @@ export PACKAGES="\
 	distrobox \
 	dmidecode \
 	dosbox \
-	eog \
 	epiphany \
 	ethtool \
 	evtest \
@@ -34,8 +35,8 @@ export PACKAGES="\
 	expect \
 	exfatprogs \
 	ffmpeg \
+	file \
 	ffmpegthumbnailer \
-	file-roller \
 	firejail \
 	flatpak \
 	fmt \
@@ -52,6 +53,7 @@ export PACKAGES="\
 	gnome-session \
 	gnome-shell \
 	gnome-software \
+	gnome-system-monitor \
 	gnome-text-editor \
 	gnome-icon-theme-extras \
 	gnome-tweaks \
@@ -59,6 +61,7 @@ export PACKAGES="\
 	gnome-menus \
 	gst-plugin-pipewire \
 	gparted \
+	gzip \
 	haveged \
 	htop \
 	ibus-pinyin \
@@ -111,6 +114,8 @@ export PACKAGES="\
 	linux-firmware \
 	liquidctl \
 	logrotate \
+	lrzip \
+	loupe \
 	lshw \
 	mesa-demos \
 	modemmanager \
@@ -143,7 +148,10 @@ export PACKAGES="\
 	sudo \
 	s-tui \
 	tree \
+	tar \
 	ttf-liberation \
+	unace \
+	unrar \
 	unzip \
 	usb_modeswitch \
 	usbutils \
@@ -162,6 +170,8 @@ export PACKAGES="\
 	xdg-user-dirs-gtk \
 	xf86-video-amdgpu \
 	xorg-server \
+	xz \
+	zip \
 	zram-generator \
 	zsh \
 "
