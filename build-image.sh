@@ -102,8 +102,8 @@ else
 	pacman --noconfirm -S "${KERNEL_PACKAGE}" "${KERNEL_PACKAGE}-headers"
 fi
 
-# install own override packages
-pacman --noconfirm -U --overwrite '*' /own_pkgs/*
+# install packages
+pacman --noconfirm -S --overwrite '*' --disable-download-timeout ${PACKAGES}
 rm -rf /var/cache/pacman/pkg
 
 # delete packages
@@ -115,8 +115,8 @@ for package in ${PACKAGES_TO_DELETE}; do
 	fi
 done
 
-# install packages
-pacman --noconfirm -S --overwrite '*' --disable-download-timeout ${PACKAGES}
+# install own override packages
+pacman --noconfirm -U --overwrite '*' /own_pkgs/*
 rm -rf /var/cache/pacman/pkg
 
 # install AUR packages
