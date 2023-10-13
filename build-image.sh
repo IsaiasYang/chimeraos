@@ -109,9 +109,9 @@ rm -rf /var/cache/pacman/pkg
 # delete packages
 for package in ${PACKAGES_TO_DELETE}; do
     echo "Checking if \$package is installed"
-	if pacman -Qq \$package 2> /dev/null; then
+	if [[ "\$(pacman -Qq $package)" == "\$package" ]]; then
 		echo "\$package is installed, deleting"
-		pacman --noconfirm -Rnsdd \$package
+		pacman --noconfirm -Rnsdd \$package || true
 	fi
 done
 
