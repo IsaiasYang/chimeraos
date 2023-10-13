@@ -222,6 +222,7 @@ export AUR_PACKAGES="\
 	libretro-virtualjaguar-git \
 	mutter-x11-scaling \
 	nintendo-udev \
+	opengamepadui-bin \
 	opengamepadui-session-git \
 	onedrive-abraunegg \
 	pikaur \
@@ -254,7 +255,6 @@ export PACKAGES_TO_DELETE="\
 	jack2 \
 	pulseaudio \
 	pulseaudio-alsa \
-	gamescope \
 	mutter \
 "
 
