@@ -211,6 +211,7 @@ export AUR_PACKAGES="\
 	gnome-shell-extension-dash-to-dock \
 	gnome-shell-extension-transparent-top-bar-git \
 	hhfc-git \
+	kanit-font \
 	legendary \
 	lib32-gamescope-plus \
 	lib32-gperftools \
@@ -219,7 +220,7 @@ export AUR_PACKAGES="\
 	libretro-prosystem-git \
 	libretro-stella2014-git \
 	libretro-virtualjaguar-git \
-	kanit-font \
+	mutter-x11-scaling \
 	nintendo-udev \
 	opengamepadui-session-git \
 	onedrive-abraunegg \
@@ -254,6 +255,7 @@ export PACKAGES_TO_DELETE="\
 	pulseaudio \
 	pulseaudio-alsa \
 	gamescope \
+	mutter \
 "
 
 export SERVICES="\
