@@ -224,7 +224,6 @@ export AUR_PACKAGES="\
 	opengamepadui-bin \
 	opengamepadui-session-git \
 	onedrive-abraunegg \
-	otf-kanit \
 	pikaur \
 	python-vdf \
 	protonup-qt-bin \
