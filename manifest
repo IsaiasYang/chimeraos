@@ -202,7 +202,6 @@ export AUR_PACKAGES="\
 	bcm20702a1-firmware \
 	boxtron \
 	chimera \
-	davfs2 \
 	downgrade \
 	frzr-sk \
 	gamescope-plus \
