@@ -219,6 +219,7 @@ export AUR_PACKAGES="\
 	libretro-prosystem-git \
 	libretro-stella2014-git \
 	libretro-virtualjaguar-git \
+	mutter-x11-scaling \
 	nintendo-udev \
 	opengamepadui-bin \
 	opengamepadui-session-git \
@@ -252,6 +253,7 @@ export PACKAGES_TO_DELETE="\
 	jack2 \
 	pulseaudio \
 	pulseaudio-alsa \
+	mutter \
 "
 
 export SERVICES="\
