@@ -256,7 +256,8 @@ rm -rf ${BUILD_IMG}
 
 IMG_FILENAME="${SYSTEM_NAME}-${VERSION}.img.tar.xz"
 if [ -z "${NO_COMPRESS}" ]; then
-	tar -c -I'xz -8 -T4' -f ${IMG_FILENAME} ${SYSTEM_NAME}-${VERSION}.img
+	proc = $(cat /proc/cpuinfo | grep processor | wc -l)
+	tar -c -I"xz -8 -T${proc}" -f ${IMG_FILENAME} ${SYSTEM_NAME}-${VERSION}.img
 	rm ${SYSTEM_NAME}-${VERSION}.img
 
 	sha256sum ${SYSTEM_NAME}-${VERSION}.img.tar.xz > sha256sum.txt
