@@ -212,7 +212,6 @@ export AUR_PACKAGES="\
 	gnome-shell-extension-dash-to-dock \
 	gnome-shell-extension-transparent-top-bar-git \
 	hhfc-git \
-	kanit-font \
 	legendary \
 	lib32-gamescope-plus \
 	lib32-gperftools \
@@ -225,6 +224,7 @@ export AUR_PACKAGES="\
 	opengamepadui-bin \
 	opengamepadui-session-git \
 	onedrive-abraunegg \
+	otf-kanit \
 	pikaur \
 	python-vdf \
 	protonup-qt-bin \
@@ -247,7 +247,6 @@ export AUR_PACKAGES="\
 	v2raya-bin \
 	wyvern \
 	yay-bin \
-	xpad-noone-dkms \
 	zenergy-dkms-git \
 "
 
