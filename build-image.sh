@@ -256,7 +256,7 @@ rm -rf ${BUILD_IMG}
 
 IMG_FILENAME="${SYSTEM_NAME}-${VERSION}.img.tar.xz"
 if [ -z "${NO_COMPRESS}" ]; then
-	proc = $(cat /proc/cpuinfo | grep processor | wc -l)
+	proc=$(cat /proc/cpuinfo | grep processor | wc -l)
 	tar -c -I"xz -8 -T${proc}" -f ${IMG_FILENAME} ${SYSTEM_NAME}-${VERSION}.img
 	rm ${SYSTEM_NAME}-${VERSION}.img
 
