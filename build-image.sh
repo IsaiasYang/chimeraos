@@ -239,6 +239,10 @@ if [ -z "${ARCHIVE_DATE}" ]; then
 	${BUILD_PATH}/etc/pacman.d/mirrorlist
 fi
 
+# show free space before snapshot
+echo "Free space"
+df -h
+
 btrfs subvolume snapshot -r ${BUILD_PATH} ${SNAP_PATH}
 btrfs send -f ${SYSTEM_NAME}-${VERSION}.img ${SNAP_PATH}
 
