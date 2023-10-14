@@ -254,6 +254,8 @@ export PACKAGES_TO_DELETE="\
 	pulseaudio \
 	pulseaudio-alsa \
 	mutter \
+	amdvlk \
+	lib32-amdvlk \
 "
 
 export SERVICES="\
