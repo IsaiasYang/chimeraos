@@ -46,6 +46,7 @@ export PACKAGES="\
 	f2fs-tools \
 	gamemode \
 	git \
+	gnome-browser-connector \
 	gnome-console \
 	gnome-control-center \
 	gnome-disk-utility \
@@ -205,7 +206,7 @@ export AUR_PACKAGES="\
 	downgrade \
 	frzr-sk \
 	gamescope-plus \
-	gamescope-session-git \
+	gamescope-session-steam-git \
 	gnome-shell-extension-clipboard-indicator-git \
 	gnome-shell-extension-desktop-icons-ng-git \
 	gnome-shell-extension-dash-to-dock \
@@ -237,7 +238,6 @@ export AUR_PACKAGES="\
 	rtl8821au-dkms-git \
 	rtw89-dkms-git \
 	ryzenadj-git \
-	rz608-fix-git \
 	steam_notif_daemon \
 	steam-removable-media-git \
 	sk-chos-tool \
