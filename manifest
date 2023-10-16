@@ -41,6 +41,7 @@ export PACKAGES="\
 	fwupd \
 	gamemode \
 	git \
+	gnome-browser-connector \
 	gnome-console \
 	gnome-control-center \
 	gnome-disk-utility \
@@ -182,7 +183,7 @@ export AUR_PACKAGES="\
 	downgrade \
 	frzr \
 	gamescope-plus \
-	gamescope-session-git \
+	gamescope-session-steam-git \
 	handygccs-git \
 	hhfc-git \
 	legendary \
