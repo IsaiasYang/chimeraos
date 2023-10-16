@@ -282,7 +282,6 @@ export USER_SERVICES="\
 	clear-gamescope-modes \
 	gamemoded.service \
 	pipewire \
-	ryzen-tctl \
 	steam-patch.service \
 "
 
