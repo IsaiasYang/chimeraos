@@ -74,6 +74,7 @@ export PACKAGES="\
 	intel-ucode \
 	intel-undervolt \
 	jq \
+	less \
 	lib32-curl \
 	lib32-fontconfig \
 	lib32-freetype2 \
@@ -178,8 +179,8 @@ export PACKAGES="\
 "
 
 export PACKAGE_OVERRIDES="\
-	https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.6.0.rc5-chos1-1/linux-chimeraos-6.6.0.rc5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.6.0.rc5-chos1-1/linux-chimeraos-headers-6.6.0.rc5.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/3003n/linux-chimeraos/releases/download/v6.6.0.rc6-chos1-2/linux-chimeraos-6.6.0.rc6.chos1-2-x86_64.pkg.tar.zst \
+	https://github.com/3003n/linux-chimeraos/releases/download/v6.6.0.rc6-chos1-2/linux-chimeraos-headers-6.6.0.rc6.chos1-2-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.2.1-chos1-2/lib32-libva-mesa-driver-23.2.1.chos1-2-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.2.1-chos1-2/lib32-mesa-23.2.1.chos1-2-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.2.1-chos1-2/lib32-mesa-vdpau-23.2.1.chos1-2-x86_64.pkg.tar.zst \
@@ -198,6 +199,7 @@ export PACKAGE_OVERRIDES="\
 # Which is often the same as the package name but it can be different.
 # Check on the AUR webpage if you are unsure
 export AUR_PACKAGES="\
+	ally-motion-evdev-git \
 	anydesk-bin \
 	ayn-platform-dkms-git \
 	bcm20702a1-firmware \
@@ -260,6 +262,7 @@ export PACKAGES_TO_DELETE="\
 
 export SERVICES="\
 	NetworkManager \
+	ally-motion-evdev \
 	avahi-daemon \
 	bluetooth \
 	bluetooth-workaround \
