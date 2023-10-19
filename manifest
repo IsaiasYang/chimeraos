@@ -219,7 +219,6 @@ export AUR_PACKAGES="\
 	libretro-stella2014-git \
 	libretro-virtualjaguar-git \
 	libextest-git \
-	mutter-x11-scaling \
 	nintendo-udev \
 	opengamepadui-bin \
 	opengamepadui-session-git \
