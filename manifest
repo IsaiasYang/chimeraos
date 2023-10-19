@@ -221,6 +221,7 @@ export AUR_PACKAGES="\
 	libextest-git \
 	mutter-x11-scaling \
 	nintendo-udev \
+	opengamepadui-bin \
 	opengamepadui-session-git \
 	onedrive-abraunegg \
 	pikaur \
