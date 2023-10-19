@@ -4,7 +4,7 @@
 set -e
 # If you have a PR open, you could also use pr-<PR-NUMBER> to use that container if that has build before.
 # Every release also has a container.txt which contains the container it was built on.
-CONTAINER="ghcr.io/chimeraos/chimeraos:master"
+CONTAINER="ghcr.io/3003n/chimeraos:dev"
 docker pull ${CONTAINER}
 # Since reflector is run upon building the container, that means the mirrors could be out of date. 
 # Since reflector still exists in the container. You could update the scripts/entrypoints so that it would update the mirrors.

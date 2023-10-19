@@ -9,6 +9,7 @@ RUN echo -e "keyserver-options auto-key-retrieve" >> /etc/pacman.d/gnupg/gpg.con
     pacman --noconfirm -S \
     arch-install-scripts \
     btrfs-progs \
+    base-devel \
     fmt \
     xcb-util-wm \
     wget \

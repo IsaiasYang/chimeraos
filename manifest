@@ -46,6 +46,7 @@ export PACKAGES="\
 	f2fs-tools \
 	gamemode \
 	git \
+	gnome-browser-connector \
 	gnome-console \
 	gnome-control-center \
 	gnome-disk-utility \
@@ -73,6 +74,7 @@ export PACKAGES="\
 	intel-ucode \
 	intel-undervolt \
 	jq \
+	less \
 	lib32-curl \
 	lib32-fontconfig \
 	lib32-freetype2 \
@@ -177,8 +179,8 @@ export PACKAGES="\
 "
 
 export PACKAGE_OVERRIDES="\
-	https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.6.0.rc5-chos1-1/linux-chimeraos-6.6.0.rc5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.6.0.rc5-chos1-1/linux-chimeraos-headers-6.6.0.rc5.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/3003n/linux-chimeraos/releases/download/v6.6.0.rc6-chos1-3/linux-chimeraos-6.6.0.rc6.chos1-3-x86_64.pkg.tar.zst \
+	https://github.com/3003n/linux-chimeraos/releases/download/v6.6.0.rc6-chos1-3/linux-chimeraos-headers-6.6.0.rc6.chos1-3-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.2.1-chos1-2/lib32-libva-mesa-driver-23.2.1.chos1-2-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.2.1-chos1-2/lib32-mesa-23.2.1.chos1-2-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.2.1-chos1-2/lib32-mesa-vdpau-23.2.1.chos1-2-x86_64.pkg.tar.zst \
@@ -197,6 +199,7 @@ export PACKAGE_OVERRIDES="\
 # Which is often the same as the package name but it can be different.
 # Check on the AUR webpage if you are unsure
 export AUR_PACKAGES="\
+	ally-motion-evdev-git \
 	anydesk-bin \
 	ayn-platform-dkms-git \
 	bcm20702a1-firmware \
@@ -205,7 +208,7 @@ export AUR_PACKAGES="\
 	downgrade \
 	frzr-sk \
 	gamescope-plus \
-	gamescope-session-git \
+	gamescope-session-steam-git \
 	hhfc-git \
 	legendary \
 	lib32-gamescope-plus \
@@ -216,11 +219,12 @@ export AUR_PACKAGES="\
 	libretro-stella2014-git \
 	libretro-virtualjaguar-git \
 	libextest-git \
-	kanit-font \
+	mutter-x11-scaling \
 	nintendo-udev \
 	opengamepadui-session-git \
 	onedrive-abraunegg \
 	pikaur \
+	python-pyclip \
 	python-vdf \
 	protonup-qt-bin \
 	protontricks \
@@ -233,16 +237,15 @@ export AUR_PACKAGES="\
 	rtl8821au-dkms-git \
 	rtw89-dkms-git \
 	ryzenadj-git \
-	rz608-fix-git \
 	steam_notif_daemon \
 	steam-removable-media-git \
 	sk-chos-tool \
 	sk-boot-to-windows \
 	ttf-sarasa-gothic-sc \
 	v2raya-bin \
+	waydroid \
 	wyvern \
 	yay-bin \
-	xpad-noone-dkms \
 	zenergy-dkms-git \
 "
 
@@ -250,11 +253,14 @@ export PACKAGES_TO_DELETE="\
 	jack2 \
 	pulseaudio \
 	pulseaudio-alsa \
-	gamescope \
+	mutter \
+	amdvlk \
+	lib32-amdvlk \
 "
 
 export SERVICES="\
 	NetworkManager \
+	ally-motion-evdev \
 	avahi-daemon \
 	bluetooth \
 	bluetooth-workaround \
@@ -277,7 +283,6 @@ export USER_SERVICES="\
 	clear-gamescope-modes \
 	gamemoded.service \
 	pipewire \
-	ryzen-tctl \
 	steam-patch.service \
 "
 
@@ -312,7 +317,7 @@ postinstallhook() {
 	
 	sed -i "s/PasswordAuthentication no/PasswordAuthentication yes/" /etc/ssh/sshd_config
 
-	sed -i "s/# export STEAM_GAMESCOPE_COLOR_MANAGED=1/export STEAM_GAMESCOPE_COLOR_MANAGED=1/" /usr/share/gamescope-session/gamescope-session-script
+	sed -i "s/# export STEAM_GAMESCOPE_COLOR_MANAGED=1/export STEAM_GAMESCOPE_COLOR_MANAGED=1/" /usr/share/gamescope-session-plus/gamescope-session-plus
 
 	# disable retroarch menu in joypad configs
 	find /usr/share/libretro/autoconfig -type f -name '*.cfg' | xargs -d '\n' sed -i '/input_menu_toggle_btn/d'
@@ -359,6 +364,9 @@ postinstallhook() {
 	grep -v sk-chos-tool.desktop | \
 	grep -v sk-chos-tool-command.desktop | \
 	grep -v com.github.tchx84.Flatseal.desktop | \
+	grep -v waydroid.app.install.desktop | \
+	grep -v waydroid.market.desktop | \
+	grep -v Waydroid.desktop | \
 	xargs -I {} sh -c "echo NoDisplay=true >> {}"
 
 	# force -steamdeck option in desktop mode to prevent constant steam updates
