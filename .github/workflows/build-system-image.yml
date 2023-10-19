@@ -13,7 +13,7 @@ on:
 
 jobs:
   build-system-image:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-4c
     permissions:
       contents: write
     outputs:
