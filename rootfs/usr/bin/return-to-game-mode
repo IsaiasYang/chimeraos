@@ -1,4 +1,9 @@
 #!/bin/bash
+
+if [ waydroid &> /dev/null ]; then
+  waydroid session stop
+fi
+
 sudo sed -i "s/^NoDisplay=true/#NoDisplay=true/" /usr/share/applications/gnome-x11.desktop
 #[ "$XDG_SESSION_TYPE" = "wayland" ] && gnome-session-quit --no-prompt || gnome-session-oneshot
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
