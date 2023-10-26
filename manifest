@@ -66,6 +66,7 @@ export PACKAGES="\
 	haveged \
 	htop \
 	ibus-pinyin \
+	ibus-libpinyin \
 	ibus-table-chinese \
 	ibus-anthy \
 	ibus-hangul \
