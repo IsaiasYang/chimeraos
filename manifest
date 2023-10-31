@@ -152,6 +152,7 @@ export PACKAGES="\
 	s-tui \
 	tree \
 	tar \
+	tree \
 	ttf-liberation \
 	unace \
 	unrar \
@@ -180,8 +181,8 @@ export PACKAGES="\
 "
 
 export PACKAGE_OVERRIDES="\
-	https://github.com/3003n/linux-chimeraos/releases/download/v6.5.6-chos1-2/linux-chimeraos-6.5.6.chos1-2-x86_64.pkg.tar.zst \
-	https://github.com/3003n/linux-chimeraos/releases/download/v6.5.6-chos1-2/linux-chimeraos-headers-6.5.6.chos1-2-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.6.0-chos1-2/linux-chimeraos-6.6.0.chos1-2-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/linux-chimeraos/releases/download/v6.6.0-chos1-2/linux-chimeraos-headers-6.6.0.chos1-2-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.2.1-chos1-2/lib32-libva-mesa-driver-23.2.1.chos1-2-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.2.1-chos1-2/lib32-mesa-23.2.1.chos1-2-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.2.1-chos1-2/lib32-mesa-vdpau-23.2.1.chos1-2-x86_64.pkg.tar.zst \
@@ -210,6 +211,7 @@ export AUR_PACKAGES="\
 	frzr-sk \
 	gamescope-plus \
 	gamescope-session-steam-git \
+	gamescope-session-steam-plus-git \
 	gnome-shell-extension-clipboard-indicator-git \
 	gnome-shell-extension-desktop-icons-ng-git \
 	gnome-shell-extension-dash-to-dock \
