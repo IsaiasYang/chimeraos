@@ -6,3 +6,5 @@
 .cache/*
 output/*
 rootfs/etc/makepkg.conf
+**/pkg/
+**/src/

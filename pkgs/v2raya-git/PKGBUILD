@@ -1,7 +1,7 @@
 # Maintainer: mzz2017 <mzz@tuta.io>
 
 pkgname=v2raya-git
-pkgver=20230204.r1293.d626ba1
+pkgver=20231103.r1454.9124bcda
 pkgrel=1
 install=.INSTALL
 pkgdesc="v2rayA nightly version"
