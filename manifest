@@ -248,7 +248,7 @@ export AUR_PACKAGES="\
 	steam-removable-media-git \
 	sk-chos-tool \
 	sk-boot-to-windows \
-	v2raya-bin \
+	v2raya-git \
 	waydroid \
 	wyvern \
 	yay-bin \
