@@ -14,8 +14,7 @@ source=(
     "https://github.com/be5invis/Sarasa-Gothic/releases/download/v$pkgver/sarasa-gothic-ttf-$pkgver.7z"
 )
 
-sha256sums=('SKIP'
-            'SKIP')
+sha256sums=('SKIP')
 
 noextract=("sarasa-gothic-ttf-$pkgver.7z")
 
