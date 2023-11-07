@@ -231,6 +231,7 @@ export AUR_PACKAGES="\
 	opengamepadui-session-git \
 	onedrive-abraunegg \
 	pikaur \
+	powerstation-bin \
 	python-pyclip \
 	python-vdf \
 	protonup-qt-bin \
@@ -275,6 +276,7 @@ export SERVICES="\
 	handycon \
 	haveged \
 	lightdm \
+	powerstation \
 	sshd \
 	systemd-timesyncd \
 	swapfile \
