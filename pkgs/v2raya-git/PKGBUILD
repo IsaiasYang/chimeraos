@@ -27,6 +27,10 @@ pkgver() {
 
 build() {
     cd "$srcdir/$pkgname/gui"
+
+    sed -i "s/event-pubsub@5.0.9/event-pubsub@5.0.10/" yarn.lock
+    sed -i 's#"@achrinza/event-pubsub" "5.0.9"#"@achrinza/event-pubsub" "5.0.10"#' yarn.lock
+
     # https://github.com/webpack/webpack/issues/14532#issuecomment-947012063
     export NODE_OPTIONS=--openssl-legacy-provider
     yarn --check-files
