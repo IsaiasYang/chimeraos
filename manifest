@@ -262,7 +262,6 @@ export PACKAGES_TO_DELETE="\
 	mutter \
 	amdvlk \
 	lib32-amdvlk \
-	ryzenadj \
 "
 
 export SERVICES="\
