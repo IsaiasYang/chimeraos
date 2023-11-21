@@ -249,6 +249,7 @@ export AUR_PACKAGES="\
 	steam-removable-media-git \
 	sk-chos-tool \
 	sk-boot-to-windows \
+	sk-steam-patch-git \
 	waydroid \
 	wyvern \
 	yay-bin \
@@ -283,6 +284,8 @@ export SERVICES="\
 	sk-auto-keep-boot-entry \
 	sk-update-boot-entry \
 	sk-resume \
+	steam-patch.service \
+	restart-steam-patch-on-boot.service \
 "
 
 export USER_SERVICES="\
