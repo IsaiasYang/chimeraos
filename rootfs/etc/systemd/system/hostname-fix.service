@@ -1,0 +1,10 @@
+[Unit]
+Description=Set hostname to alphanumeric characters
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/hostname-fix
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -276,6 +276,7 @@ export SERVICES="\
 	frzr_root-swap-swapfile.swap \
 	handycon \
 	haveged \
+	hostname-fix \
 	lightdm \
 	powerstation \
 	sshd \
@@ -284,8 +285,8 @@ export SERVICES="\
 	sk-auto-keep-boot-entry \
 	sk-update-boot-entry \
 	sk-resume \
-	steam-patch.service \
-	restart-steam-patch-on-boot.service \
+	steam-patch \
+	restart-steam-patch-on-boot \
 "
 
 export USER_SERVICES="\
