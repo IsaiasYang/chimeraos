@@ -1,7 +1,14 @@
 #!/bin/bash
 
+DEFAULT_HOSTNAME="SkChimeraOS"
+
 # 获取当前主机名
-current_hostname=$(hostname)
+current_hostname=$(hostnamectl --static)
+
+# 如果为空，设置为默认值
+if [ -z "$current_hostname" ]; then
+    current_hostname="$DEFAULT_HOSTNAME"
+fi
 
 # 使用sed过滤
 new_hostname=$(echo "$current_hostname" | sed -e 's/[^a-zA-Z0-9_]//g')
