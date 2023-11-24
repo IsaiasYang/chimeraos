@@ -144,6 +144,7 @@ export PACKAGES="\
 	papirus-icon-theme \
 	retroarch \
 	rsync \
+	smartmontools \
 	smbclient \
 	sof-firmware \
 	sshfs \
