@@ -286,7 +286,6 @@ export SERVICES="\
 	sk-auto-keep-boot-entry \
 	sk-update-boot-entry \
 	sk-resume \
-	steam-patch \
 	restart-steam-patch-on-boot \
 "
 
