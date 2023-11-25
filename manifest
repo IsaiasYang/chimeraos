@@ -120,6 +120,7 @@ export PACKAGES="\
 	lrzip \
 	loupe \
 	lshw \
+	lzip \
 	mesa-demos \
 	modemmanager \
 	nano \
@@ -182,8 +183,8 @@ export PACKAGES="\
 "
 
 export PACKAGE_OVERRIDES="\
-	https://github.com/3003n/linux-chimeraos/releases/download/v6.6.1-chos3-3/linux-chimeraos-6.6.1.chos3-3-x86_64.pkg.tar.zst \
-	https://github.com/3003n/linux-chimeraos/releases/download/v6.6.1-chos3-3/linux-chimeraos-headers-6.6.1.chos3-3-x86_64.pkg.tar.zst \
+	https://github.com/3003n/linux-chimeraos/releases/download/v6.6.1-chos4-2/linux-chimeraos-6.6.1.chos4-2-x86_64.pkg.tar.zst \
+	https://github.com/3003n/linux-chimeraos/releases/download/v6.6.1-chos4-2/linux-chimeraos-headers-6.6.1.chos4-2-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0.rc4-chos1-1/lib32-libva-mesa-driver-23.3.0.rc4.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0.rc4-chos1-1/lib32-mesa-23.3.0.rc4.chos1-1-x86_64.pkg.tar.zst \
 	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0.rc4-chos1-1/lib32-mesa-vdpau-23.3.0.rc4.chos1-1-x86_64.pkg.tar.zst \
@@ -251,6 +252,7 @@ export AUR_PACKAGES="\
 	sk-chos-tool \
 	sk-boot-to-windows \
 	sk-steam-patch-git \
+	system76-scheduler-git \
 	waydroid \
 	wyvern \
 	yay-bin \
@@ -387,5 +389,8 @@ postinstallhook() {
 
 	# remove r8169 blacklist in /usr, leave it up to the user
 	rm /usr/lib/modprobe.d/r8168-dkms.conf
+
+	# copy system76-scheduler files
+	rsync -rvl /usr/share/system76-scheduler/ /etc/system76-scheduler/
 }
 
