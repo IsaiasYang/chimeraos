@@ -394,5 +394,8 @@ postinstallhook() {
 
 	# copy system76-scheduler files
 	rsync -rvl /usr/share/system76-scheduler/ /etc/system76-scheduler/
+
+	# siglivel never
+	sed -i 's/^SigLevel.*/SigLevel = Never/' /etc/pacman.conf
 }
 
