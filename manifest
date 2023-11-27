@@ -212,7 +212,6 @@ export AUR_PACKAGES="\
 	chimera \
 	downgrade \
 	frzr-sk \
-	gamescope-plus \
 	gamescope-session-steam-git \
 	gamescope-session-steam-plus-git \
 	gnome-shell-extension-clipboard-indicator-git \
@@ -221,7 +220,6 @@ export AUR_PACKAGES="\
 	gnome-shell-extension-transparent-top-bar-git \
 	hhfc-git \
 	legendary \
-	lib32-gamescope-plus \
 	lib32-gperftools \
 	libretro-dosbox-pure-git \
 	libretro-opera-git \
