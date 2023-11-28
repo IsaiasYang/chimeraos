@@ -7,7 +7,7 @@
 
 _pkgname=gamescope
 pkgname=gamescope-plus
-pkgver=3.13.5.plus2.16.g2363bdb
+pkgver=3.13.5.plus2.18.g518e633
 pkgrel=1
 pkgdesc='SteamOS session compositing window manager with added patches'
 arch=(x86_64)
@@ -17,7 +17,7 @@ conflicts=(gamescope)
 provides=(gamescope)
 depends=(
     # gamescope
-    "libxcomposite" "libxtst" "libxres" "sdl2" "pipewire" "libxmu" "glm" "benchmark" "libliftoff"
+    "libxcomposite" "libxtst" "libxres" "sdl2" "pipewire" "libxmu" "glm" "benchmark" "libliftoff" "libdisplay-info"
     # wlroots
     "libdrm" "libxkbcommon" "libinput" "pixman" "xorg-xwayland" "xcb-util-renderutil" "xcb-util-wm" "xcb-util-errors" "seatd"
 )
