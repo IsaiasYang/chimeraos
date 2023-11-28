@@ -252,6 +252,9 @@ if [ -z "${ARCHIVE_DATE}" ]; then
 	export TODAY_DATE=$(date +%Y/%m/%d)
 	echo "Server=https://asia.archive.pkgbuild.com/repos/${TODAY_DATE}/\$repo/os/\$arch\nServer=https://archive.archlinux.org/repos/${TODAY_DATE}/\$repo/os/\$arch" > \
 	${BUILD_PATH}/etc/pacman.d/mirrorlist
+else
+	echo "Server=https://asia.archive.pkgbuild.com/repos/${ARCHIVE_DATE}/\$repo/os/\$arch\nServer=https://archive.archlinux.org/repos/${ARCHIVE_DATE}/\$repo/os/\$arch" > \
+	${BUILD_PATH}/etc/pacman.d/mirrorlist
 fi
 
 # show free space before snapshot
