@@ -130,7 +130,7 @@ done
 
 # remove AUR packages
 for package in ${AUR_PACKAGES_TO_DELETE}; do
-	rm -f /extra_pkgs/\${package}-*.pkg.tar.zst || true
+	rm -f /extra_pkgs/\${package} || true
 done
 
 # install AUR packages
@@ -250,10 +250,9 @@ rm ${BUILD_PATH}/manifest
 # if no archive date is set
 if [ -z "${ARCHIVE_DATE}" ]; then
 	export TODAY_DATE=$(date +%Y/%m/%d)
-	echo "Server=https://asia.archive.pkgbuild.com/repos/${TODAY_DATE}/\$repo/os/\$arch\nServer=https://archive.archlinux.org/repos/${TODAY_DATE}/\$repo/os/\$arch" > \
+	echo "Server=https://asia.archive.pkgbuild.com/repos/${TODAY_DATE}/\$repo/os/\$arch" > \
 	${BUILD_PATH}/etc/pacman.d/mirrorlist
-else
-	echo "Server=https://asia.archive.pkgbuild.com/repos/${ARCHIVE_DATE}/\$repo/os/\$arch\nServer=https://archive.archlinux.org/repos/${ARCHIVE_DATE}/\$repo/os/\$arch" > \
+	echo "Server=https://archive.archlinux.org/repos/${TODAY_DATE}/\$repo/os/\$arch" >> \
 	${BUILD_PATH}/etc/pacman.d/mirrorlist
 fi
 
