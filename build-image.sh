@@ -128,6 +128,11 @@ for package in ${PACKAGES_TO_DELETE}; do
 	fi
 done
 
+# remove AUR packages
+for package in ${AUR_PACKAGES_TO_DELETE}; do
+	rm -f /extra_pkgs/\${package}-*.pkg.tar.zst || true
+done
+
 # install AUR packages
 pacman --noconfirm -U --overwrite '*' /extra_pkgs/*
 rm -rf /var/cache/pacman/pkg

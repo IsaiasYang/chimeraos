@@ -265,6 +265,10 @@ export PACKAGES_TO_DELETE="\
 	lib32-amdvlk \
 "
 
+export AUR_PACKAGES_TO_DELETE="\
+	gamescope-session-git-r*.pkg.tar.zst \
+"
+
 export SERVICES="\
 	NetworkManager \
 	ally-motion-evdev \
