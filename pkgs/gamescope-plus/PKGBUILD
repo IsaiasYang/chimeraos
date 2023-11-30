@@ -32,7 +32,7 @@ makedepends=(
   vulkan-headers
   wayland-protocols
 )
-_tag=518e633cdbb9e1483d1f3a8bdb4fab20c60eb10a
+_tag=bd3074ac89b8881b451e573f255dfa616ad6d135
 source=("git+https://github.com/3003n/gamescope.git#commit=${_tag}"
         "git+https://gitlab.freedesktop.org/wlroots/wlroots.git"
         "git+https://gitlab.freedesktop.org/emersion/libliftoff.git"
