@@ -185,16 +185,16 @@ export PACKAGES="\
 export PACKAGE_OVERRIDES="\
 	https://github.com/3003n/linux-chimeraos/releases/download/v6.6.3-chos2-2/linux-chimeraos-6.6.3.chos2-2-x86_64.pkg.tar.zst \
 	https://github.com/3003n/linux-chimeraos/releases/download/v6.6.3-chos2-2/linux-chimeraos-headers-6.6.3.chos2-2-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0.rc5-chos1-1/lib32-libva-mesa-driver-23.3.0.rc5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0.rc5-chos1-1/lib32-mesa-23.3.0.rc5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0.rc5-chos1-1/lib32-mesa-vdpau-23.3.0.rc5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0.rc5-chos1-1/lib32-vulkan-intel-23.3.0.rc5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0.rc5-chos1-1/lib32-vulkan-radeon-23.3.0.rc5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0.rc5-chos1-1/libva-mesa-driver-23.3.0.rc5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0.rc5-chos1-1/mesa-23.3.0.rc5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0.rc5-chos1-1/mesa-vdpau-23.3.0.rc5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0.rc5-chos1-1/vulkan-intel-23.3.0.rc5.chos1-1-x86_64.pkg.tar.zst \
-	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0.rc5-chos1-1/vulkan-radeon-23.3.0.rc5.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0-chos1-1/lib32-libva-mesa-driver-23.3.0.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0-chos1-1/lib32-mesa-23.3.0.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0-chos1-1/lib32-mesa-vdpau-23.3.0.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0-chos1-1/lib32-vulkan-intel-23.3.0.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0-chos1-1/lib32-vulkan-radeon-23.3.0.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0-chos1-1/libva-mesa-driver-23.3.0.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0-chos1-1/mesa-23.3.0.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0-chos1-1/mesa-vdpau-23.3.0.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0-chos1-1/vulkan-intel-23.3.0.chos1-1-x86_64.pkg.tar.zst \
+	https://github.com/ChimeraOS/mesa-chimeraos/releases/download/23.3.0-chos1-1/vulkan-radeon-23.3.0.chos1-1-x86_64.pkg.tar.zst \
 	https://archive.archlinux.org/repos/2023/06/28/extra/os/x86_64/libretro-pcsx2-11900-2-x86_64.pkg.tar.zst \
 	https://archive.archlinux.org/packages/l/libretro-mame/libretro-mame-85763-1-x86_64.pkg.tar.zst \
 "
@@ -354,6 +354,8 @@ postinstallhook() {
 	# remove dolphin standalone emulator files (only need /usr/share/dolphin-emu/sys)
 	rm /usr/bin/dolphin-emu
 	rm /usr/bin/dolphin-emu-nogui
+	# dolphin-tool is no longer created in new builds?
+	#rm /usr/bin/dolphin-tool
 	rm /usr/share/applications/dolphin-emu.desktop
 
 	# clean up desktop shortcuts
