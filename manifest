@@ -148,6 +148,7 @@ export PACKAGES="\
 	papirus-icon-theme \
 	retroarch \
 	rsync \
+	screen \
 	smartmontools \
 	smbclient \
 	sof-firmware \
