@@ -45,8 +45,8 @@ NEED_REBOOT=${1:-"0"}
 echo "start frzr-unlock"
 frzr-unlock
 
-echo $(ls /boot/)
-# echo $(ls /frzr_root/deployments)
+
+bootctl --path=/boot install 2>/dev/null
 
 service_status=$(systemctl is-enabled update_boot_config.service 2>/dev/null)
 if [[ "$service_status" == "enabled" ]]; then
