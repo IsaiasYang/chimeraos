@@ -253,6 +253,7 @@ export AUR_PACKAGES="\
 	sk-boot-to-windows \
 	system76-scheduler-git \
 	waydroid \
+	waydroid-script-git \
 	wyvern \
 	yay-bin \
 	zenergy-dkms-git \
