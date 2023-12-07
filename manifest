@@ -292,6 +292,7 @@ export SERVICES="\
 	sk-auto-keep-boot-entry \
 	sk-update-boot-entry \
 	sk-resume \
+	waydroid-container \
 "
 
 export USER_SERVICES="\
