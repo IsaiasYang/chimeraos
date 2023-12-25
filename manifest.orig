@@ -130,6 +130,7 @@ export PACKAGES="\
 	networkmanager \
 	nfs-utils \
 	nmon \
+	noto-fonts-cjk \
 	noto-fonts-emoji \
 	nss-mdns \
 	ntfs-3g \
@@ -229,7 +230,6 @@ export AUR_PACKAGES="\
 	libretro-virtualjaguar-git \
 	mutter-x11-scaling \
 	nintendo-udev \
-	nerd-fonts-sarasa-term \
 	opengamepadui-bin \
 	opengamepadui-session-git \
 	onedrive-abraunegg \
