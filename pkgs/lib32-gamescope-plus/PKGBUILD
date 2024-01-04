@@ -26,7 +26,9 @@ makedepends=(
   meson
   ninja
   cmake
+  glslang
   vulkan-headers
+  wayland-protocols
 )
 _tag=4baa1f044452bfd74dd267a035b394a1a850ac69
 source=("git+https://github.com/3003n/gamescope.git#commit=${_tag}"
