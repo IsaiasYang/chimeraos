@@ -291,6 +291,7 @@ export SERVICES="\
 	systemd-timesyncd \
 	swapfile \
 	sk-auto-keep-boot-entry \
+	sk-bind-mount \
 	sk-update-boot-entry \
 	sk-resume \
 	waydroid-container \
