@@ -127,7 +127,6 @@ export PACKAGES="\
 	nautilus \
 	networkmanager \
 	nfs-utils \
-	nix \
 	nmon \
 	noto-fonts-emoji \
 	nss-mdns \
