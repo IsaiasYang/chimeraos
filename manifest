@@ -15,7 +15,6 @@ export KERNEL_PACKAGE_ORIGIN="local"
 
 export PACKAGES="\
 	accountsservice \
-	acpi_call-dkms \
 	alsa-firmware \
 	alsa-utils \
 	amd-ucode \
